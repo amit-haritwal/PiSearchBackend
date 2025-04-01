@@ -21,17 +21,14 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Place your pi digits binary file:
-- Create a binary file named `pi_digits.bin` containing the digits of π
-- Each byte should contain 2 digits (4 bits each)
-- Place the file in the project root directory
-
 ## Usage
 
 1. Start the server:
 ```bash
 python app.py
 ```
+
+The server will automatically download and use the pi digits file from Mega.
 
 2. The API will be available at `http://localhost:4000`
 
@@ -46,7 +43,7 @@ python app.py
 
 ## Environment Variables
 
-- `PI_FILE_PATH`: Path to the pi digits binary file (default: 'pi_digits.bin')
+- `MEGA_URL`: URL to the Mega file containing π digits (default: provided Mega URL)
 - `PORT`: Server port (default: 4000)
 - `FLASK_DEBUG`: Enable debug mode (default: False)
 
